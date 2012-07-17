@@ -44,6 +44,7 @@ namespace SEQAN_NAMESPACE_MAIN
 .Metafunction.Cols
 ..class:Class.Align
 ..cat:Alignments
+..class:Class.Align
 ..summary:Type of column container of an alignment.
 ..signature:Cols<T>::Type
 ..param.T:An alignment type.
@@ -355,6 +356,7 @@ SEQAN_CHECKPOINT
 ..cat:Alignments
 ..summary:A row in an alignment. 
 ..signature:Row & row(align, position)
+..class:Class.Align
 ..param.align:An alignment.
 ...type:Class.Align
 ..param.position:A position in the @Function.rows@ container of $align$.
