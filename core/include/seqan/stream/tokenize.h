@@ -517,6 +517,7 @@ _readAndCompareWithStr(TRecordReader & reader,
 
 /**
 .Function.readUntilOneOf
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read characters from stream into buffer until one of the given characters is encountered
 ..signature:readUntilWhitespace(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader, c1[, c2[, c3[, c4[, c5]]])
@@ -622,6 +623,7 @@ readUntilOneOf(TBuffer & buffer, RecordReader<TStream, TPass> & reader, char c1,
 
 /**
 .Function.readUntilWhitespace
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read characters from stream into buffer until Whitespace is encountered
 ..signature:readUntilWhitespace(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader)
@@ -675,6 +677,7 @@ _parseReadWordUntilWhitespace(TFile& file, TChar& c)
 
 /**
 .Function.readUntilBlank
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read characters from stream into buffer until Blank is encountered
 ..signature:readUntilBlank(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader)
@@ -708,6 +711,7 @@ readUntilBlank(TBuffer & buffer,
 
 /**
 .Function.readUntilChar
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read characters from stream into buffer until Char is encountered
 ..signature:readUntilChar(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader, TChar const & x)
@@ -752,6 +756,7 @@ readUntilChar(TBuffer & buffer,
 
 /**
 .Function.readNChars
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read exactly n characters from stream into buffer
 ..signature:readNChars(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader, unsigned const n)
@@ -795,6 +800,7 @@ readNChars(TBuffer & buffer,
 
 /**
 .Function.readNCharsIgnoringWhitespace
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read n characters from stream into buffer, but skip certain Chars
 ..signature:readNCharsIgnoringWhitespace(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader, unsigned const n)
@@ -857,6 +863,7 @@ readNCharsIgnoringWhitespace(TBuffer & buffer,
 
 /**
 .Function.skipNChars
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip exactly n characters from stream
 ..signature:skipNChars(RecordReader<TStream, TPass> & recordReader, unsigned const n)
@@ -890,6 +897,7 @@ skipNChars(RecordReader<TStream, TPass> & reader,
 }
 /**
 .Function.skipNCharsIgnoringWhitespace
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip n characters from stream, not counting whitespaces
 ..signature:skipNCharsIgnoringWhitespace(RecordReader<TStream, TPass> & recordReader, unsigned const n)
@@ -939,6 +947,7 @@ skipNCharsIgnoringWhitespace(RecordReader<TStream, TPass> & reader,
 // ---
 /**
 .Function.skipUntilWhitespace
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip (i.e. read without saving) characters from stream until Whitespace is encountered
 ..signature:skipUntilWhitespace(RecordReader<TStream, TPass> & recordReader)
@@ -966,6 +975,7 @@ skipUntilWhitespace(RecordReader<TStream, TPass> & reader)
 
 /**
 .Function.skipUntilBlank
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip (i.e. read without saving) characters from stream until Blank is encountered
 ..signature:skipUntilBlank(RecordReader<TStream, TPass> & recordReader)
@@ -1001,6 +1011,7 @@ _seekWhiteSpace(TIterator &it, TIterator itEnd)
 
 /**
 .Function.skipUntilGraph
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip (i.e. read without saving) characters from stream until printable, non-' ' character is encountered
 ..signature:skipUntilGraph(RecordReader<TStream, TPass> & recordReader)
@@ -1038,6 +1049,7 @@ _parseSkipWhitespace(TFile& file, TChar& c)
 
 /**
 .Function.skipUntilChar
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip (i.e. read without saving) characters from stream until Char is encountered
 ..signature:skipUntilChar(RecordReader<TStream, TPass> & recordReader, TChar const & x)
@@ -1119,6 +1131,7 @@ _seekTab(TIterator& it, TIterator itEnd)
 
 /**
 .Function.skipUntilString
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip (i.e. read without saving) characters from stream until String is encountered
 ..signature:skipUntilString(RecordReader<TStream, TPass> & recordReader, TString const & str)
@@ -1183,6 +1196,7 @@ SEQAN_CHECKPOINT
 
 /**
 .Function.readUntilTabOrLineBreak
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read characters from stream until a tab or line-break occurs.
 ..signature:readUntilTabOrLineBreak(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader)
@@ -1215,6 +1229,7 @@ readUntilTabOrLineBreak(TBuffer & buffer,
 
 /**
 .Function.readLetters
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read characters from stream as long as characters are letters
 ..signature:readLetters(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader)
@@ -1260,6 +1275,7 @@ _parseReadWord(TFile & file, TChar& c)
 
 /**
 .Function.readDigits
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read characters from stream as long as characters are digits
 ..signature:readDigits(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader)
@@ -1290,6 +1306,7 @@ readDigits(TBuffer & buffer, RecordReader<TStream, TPass> & reader)
 
 /**
 .Function.readAlphaNums
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read characters from stream as long as characters are letters
 ..signature:readAlphaNums(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader)
@@ -1334,6 +1351,7 @@ _parseReadIdentifier(TFile & file, TString& str, TChar& c)
 
 /**
 .Function.skipWhitespaces
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip (i.e. read without saving) characters from stream until non-Whitespace is encountered
 ..signature:skipWhitespaces(RecordReader<TStream, TPass> & recordReader)
@@ -1361,6 +1379,7 @@ skipWhitespaces(RecordReader<TStream, TPass> & reader)
 
 /**
 .Function.skipChar
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip one character that must be equal to a given one for this function to succeed.
 ..signature:skipChar(RecordReader<TStream, TPass> & recordReader, c)
@@ -1390,6 +1409,7 @@ skipChar(RecordReader<TStream, TPass> & reader, char const c)
 
 /**
 .Function.skipBlanks
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip (i.e. read without saving) characters from stream until non-Blank is encountered
 ..signature:skipBlanks(RecordReader<TStream, TPass> & recordReader)
@@ -1444,6 +1464,7 @@ _parseSkipBlanks(TFile& file, TChar& c)
 
 /**
 .Function.readLine
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read a line from stream and save it to buffer
 ..signature:readLine(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader)
@@ -1482,6 +1503,7 @@ readLine(TBuffer & buffer, RecordReader<TStream, TPass> & reader)
 
 /**
 .Function.readLineStripTrailingBlanks
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read a line from stream and save it to buffer, remove trailing blanks
 ..signature:readLineStripTrailingBlanks(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader)
@@ -1554,6 +1576,7 @@ _parseReadFilepath(TFile& file, TChar& c)
 
 /**
 .Function.skipLine
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip a line in stream and go to beginning of next
 ..signature:skipLine(RecordReader<TStream, TPass> & recordReader)
@@ -1603,6 +1626,7 @@ _parseSkipLine(TFile& file, TChar& c)
 
 /**
 .Function.countLine
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:count characters in a line not including \r and \n
 ..signature:countLine(unsigned & count, RecordReader<TStream, TPass> & recordReader)
@@ -1639,6 +1663,7 @@ countLine(unsigned & count, RecordReader<TStream, TPass> & reader)
 
 /**
 .Function.readDna5IgnoringWhitespaces
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Read characters from stream, as long as they are DNA5 characters. Skip over whitespaces.
 ..signature:readDna5IgnoringWhitespaces(TBuffer & buffer, RecordReader<TStream, TPass> & recordReader)
@@ -1671,6 +1696,7 @@ readDna5IgnoringWhitespaces(TBuffer & buffer,
 
 /**
 .Function.skipUntilLineBeginsWithChar
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip input until the first graphical(see @Function.isgraph@) character of a line is equal to c
 ..signature:skipUntilLineBeginsWithChar(RecordReader<TStream, TPass> & recordReader, TChar const & c)
@@ -1735,6 +1761,7 @@ SEQAN_CHECKPOINT
 
 /**
 .Function.skipUntilLineBeginsWithStr
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip input until a line begins with str.
 ..signature:skipUntilLineBeginsWithStr(RecordReader<TStream, TPass> & recordReader, TString const & str)
@@ -1806,6 +1833,7 @@ SEQAN_CHECKPOINT
 
 /**
 .Function.skipUntilLineBeginsWithOneCharOfStr
+..class:Class.RecordReader
 ..cat:Input/Output
 ..summary:Skip input until a line begins with a one of the characters in str
 ..signature:skipUntilLineBeginsWithOneCharOfStr(RecordReader<TStream, TPass> & recordReader, TString const & str)

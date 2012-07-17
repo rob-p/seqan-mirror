@@ -41,7 +41,8 @@ namespace SEQAN_NAMESPACE_MAIN
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Metafunction.Cols:
+.Metafunction.Cols
+..class:Class.Align
 ..cat:Alignments
 ..summary:Type of column container of an alignment.
 ..signature:Cols<T>::Type
@@ -55,7 +56,8 @@ template <typename T> struct Cols;
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Metafunction.Col:
+.Metafunction.Col
+..class:Class.Align
 ..cat:Alignments
 ..summary:Type of a column in an alignment.
 ..signature:Col<T>::Type
@@ -76,7 +78,8 @@ struct Col:
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Metafunction.Rows:
+.Metafunction.Rows
+..class:Class.Align
 ..cat:Alignments
 ..summary:Type of row container of an alignment.
 ..signature:Rows<T>::Type
@@ -91,7 +94,8 @@ template <typename T> struct Rows;
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Metafunction.Row:
+.Metafunction.Row
+..class:Class.Align
 ..cat:Alignments
 ..summary:Type of a row in an alignment.
 ..signature:Row<T>::Type
@@ -197,6 +201,7 @@ void move(Align<TSource, TSpec> & target, Align<TSource, TSpec> & source)
 //////////////////////////////////////////////////////////////////////////////
 
 ///.Metafunction.Value.param.T.type:Class.Align
+///.Metafunction.Value.class:Class.Align
 
 template <typename TSource, typename TSpec>
 struct Value<Align<TSource, TSpec> >:
@@ -212,6 +217,7 @@ struct Value<Align<TSource, TSpec> const>:
 //////////////////////////////////////////////////////////////////////////////
 
 ///.Metafunction.GetValue.param.T.type:Class.Align
+///.Metafunction.GetValue.class:Class.Align
 
 template <typename TSource, typename TSpec>
 struct GetValue<Align<TSource, TSpec> >:
@@ -227,6 +233,7 @@ struct GetValue<Align<TSource, TSpec> const>:
 //////////////////////////////////////////////////////////////////////////////
 
 ///.Metafunction.Reference.param.T.type:Class.Align
+///.Metafunction.Reference.class:Class.Align
 
 template <typename TSource, typename TSpec>
 struct Reference<Align<TSource, TSpec> >:
@@ -246,6 +253,7 @@ struct Reference<Align<TSource, TSpec> const>:
 //////////////////////////////////////////////////////////////////////////////
 
 ///.Metafunction.Rows.param.T.type:Class.Align
+///.Metafunction.Rows.class:Class.Align
 
 template <typename TSource, typename TSpec>
 struct Rows<Align<TSource, TSpec> >
@@ -261,6 +269,7 @@ struct Rows<Align<TSource, TSpec> const>
 //////////////////////////////////////////////////////////////////////////////
 
 ///.Metafunction.Source.param.T.type:Class.Align
+///.Metafunction.Source.class:Class.Align
 
 template <typename TSource, typename TSpec>
 struct Source<Align<TSource, TSpec> >
@@ -277,7 +286,9 @@ struct Source<Align<TSource, TSpec> const >
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Metafunction.StringSetType:
+.Metafunction.StringSetType
+..class:Class.Align
+..class:Spec.Alignment Graph
 ..cat:Alignments
 ..summary:Return type of @Function.stringSet@ function. 
 ..signature:StringSetType<T>::Type
@@ -308,7 +319,8 @@ struct StringSetType<Align<TSource, TSpec> const >
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Function.rows:
+.Function.rows
+..class:Class.Align
 ..cat:Alignments
 ..summary:The container of rows in an alignment. 
 ..signature:Rows rows(align)
@@ -338,7 +350,8 @@ SEQAN_CHECKPOINT
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Function.row:
+.Function.row
+..class:Class.Align
 ..cat:Alignments
 ..summary:A row in an alignment. 
 ..signature:Row & row(align, position)
@@ -373,7 +386,8 @@ SEQAN_CHECKPOINT
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Function.cols:
+.Function.cols
+..class:Class.Align
 ..cat:Alignments
 ..summary:The container of columns in an alignment. 
 ..signature:Cols cols(align)
@@ -402,7 +416,8 @@ SEQAN_CHECKPOINT
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Function.col:
+.Function.col
+..class:Class.Align
 ..cat:Alignments
 ..summary:A column in an alignment. 
 ..signature:Col & col(align, position)
@@ -436,6 +451,7 @@ SEQAN_CHECKPOINT
 //////////////////////////////////////////////////////////////////////////////
 
 ///.Function.detach.param.object.type:Class.Align
+///.Function.detach.class:Class.Align
 
 template <typename TSource, typename TSpec>
 inline void
@@ -576,7 +592,8 @@ SEQAN_CHECKPOINT
 //////////////////////////////////////////////////////////////////////////////
 
 /**
-.Function.setStrings:
+.Function.setStrings
+..class:Class.Align
 ..cat:Alignments
 ..summary:Loads the sequences of a stringset into an alignment.
 ..signature:setStrings(align, stringset)
@@ -631,7 +648,8 @@ clearGaps(Align<TSource, TSpec> & me)
 
 //////////////////////////////////////////////////////////////////////////////
 /**
-.Function.stringSet:
+.Function.stringSet
+..class:Class.Align
 ..param.g.type:Class.Align
 ..include:seqan/align.h
 */
