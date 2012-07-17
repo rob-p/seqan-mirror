@@ -43,6 +43,7 @@ namespace SEQAN_NAMESPACE_MAIN
 /**
 .Metafunction.Cols:
 ..cat:Alignments
+..class:Class.Align
 ..summary:Type of column container of an alignment.
 ..signature:Cols<T>::Type
 ..param.T:An alignment type.
@@ -227,6 +228,7 @@ struct GetValue<Align<TSource, TSpec> const>:
 //////////////////////////////////////////////////////////////////////////////
 
 ///.Metafunction.Reference.param.T.type:Class.Align
+///.Metafunction.Reference.class:Class.Align
 
 template <typename TSource, typename TSpec>
 struct Reference<Align<TSource, TSpec> >:
@@ -342,6 +344,7 @@ SEQAN_CHECKPOINT
 ..cat:Alignments
 ..summary:A row in an alignment. 
 ..signature:Row & row(align, position)
+..class:Class.Align
 ..param.align:An alignment.
 ...type:Class.Align
 ..param.position:A position in the @Function.rows@ container of $align$.

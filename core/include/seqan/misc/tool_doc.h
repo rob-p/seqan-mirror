@@ -667,6 +667,7 @@ public:
 ..summary:Append two @Class.ToolDoc@ objects.
 ..cat:Miscalleneous
 ..signature:append(a, b)
+..class:Class.ToolDoc
 ..param.a:This object is updated.
 ...type:Class.ToolDoc
 ..param.b:This object is appended to $b$.
@@ -707,6 +708,7 @@ inline void append(ToolDoc & a, ToolDoc const & b)
 ..summary:Set tool name for @Class.ToolDoc@ object.
 ..cat:Miscalleneous
 ..signature:setName(doc, name)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to set the name of.
 ...type:Class.ToolDoc
 ..param.name:Name to set.
@@ -729,6 +731,7 @@ inline void setName(ToolDoc & doc, CharString const & name)
 ..summary:Get tool name of @Class.ToolDoc@ object.
 ..cat:Miscalleneous
 ..signature:setName(doc)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to set the tool name of.
 ...type:Class.ToolDoc
 ..returns:Tool name of documentation object.
@@ -750,6 +753,7 @@ inline CharString const & getName(ToolDoc const & doc)
 ..summary:Set short description for @Class.ToolDoc@ object.
 ..cat:Miscalleneous
 ..signature:setShortDescriptioin(doc, description)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to set the short description of.
 ...type:Class.ToolDoc
 ..param.description:Short description to set.
@@ -772,6 +776,7 @@ inline void setShortDescription(ToolDoc & doc, CharString const & shortDescripti
 ..summary:Get short description of @Class.ToolDoc@ object.
 ..cat:Miscalleneous
 ..signature:setName(doc)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to set the short description of.
 ...type:Class.ToolDoc
 ..returns:Tool description of documentation object.
@@ -793,6 +798,7 @@ inline CharString const & getShortDescription(ToolDoc const & doc)
 ..cat:Miscalleneous
 ..summary:Set date string for @Class.ToolDoc@ object.
 ..signature:setDate(doc, date)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to set the date string to.
 ...type:Class.ToolDoc
 ..param.date:Date string to set.
@@ -815,6 +821,7 @@ inline void setDate(ToolDoc & doc, CharString const & date)
 ..cat:Miscalleneous
 ..summary:Get date string from @Class.ToolDoc@ object.
 ..signature:getDate(doc)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to get the date string of.
 ...type:Class.ToolDoc
 ..returns:Date string.
@@ -836,6 +843,7 @@ inline CharString const & getDate(ToolDoc const & doc)
 ..cat:Miscalleneous
 ..summary:Set version string for @Class.ToolDoc@ object.
 ..signature:setVersion(doc, version)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to set the version string to.
 ...type:Class.ToolDoc
 ..param.name:Version string to set.
@@ -857,6 +865,7 @@ inline void setVersion(ToolDoc & doc, CharString const & version)
 .Function.getVersion
 ..cat:Miscalleneous
 ..summary:Get version string from @Class.ToolDoc@ object.
+..class:Class.ToolDoc
 ..signature:getVersion(doc)
 ..param.doc:Tool documentation object to get the version string of.
 ...type:Class.ToolDoc
@@ -879,6 +888,7 @@ inline CharString const & getVersion(ToolDoc const & doc)
 ..cat:Miscalleneous
 ..summary:Set version string for @Class.ToolDoc@ object.
 ..signature:setManTitle(doc, title)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to set the man title to.
 ...type:Class.ToolDoc
 ..param.title:Title string to set.
@@ -901,6 +911,7 @@ inline void setManTitle(ToolDoc & doc, CharString const & title)
 ..cat:Miscalleneous
 ..summary:Get man title from @Class.ToolDoc@ object.
 ..signature:getManTitle(doc)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to get the man title of.
 ...type:Class.ToolDoc
 ..returns:Man title.
@@ -922,6 +933,7 @@ inline CharString const & getManTitle(ToolDoc & doc)
 ..cat:Miscalleneous
 ..summary:Add section to @Class.ToolDoc@ object.
 ..signature:addSection(doc, title)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to add section to.
 ...type:Class.ToolDoc
 ..param.title:Section title.
@@ -944,6 +956,7 @@ inline void addSection(ToolDoc & doc, CharString const & title)
 ..cat:Miscalleneous
 ..summary:Add subsection to @Class.ToolDoc@ object.
 ..signature:addSubSection(doc, title)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to add subsection to.
 ...type:Class.ToolDoc
 ..param.title:Subsection title.
@@ -966,6 +979,7 @@ inline void addSubSection(ToolDoc & doc, CharString const & title)
 ..cat:Miscalleneous
 ..summary:Add text line/paragraph to @Class.ToolDoc@.
 ..signature:addText(doc, text, [isParagraph])
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to text to.
 ...type:Class.ToolDoc
 ..param.text:Text to add.
@@ -997,6 +1011,7 @@ inline void addText(ToolDoc & doc, CharString const & text)
 ..cat:Miscalleneous
 ..summary:Add list item to @Class.ToolDoc@ object.
 ..signature:addListItem(doc, key, value)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to add subsection to.
 ...type:Class.ToolDoc
 ..param.key:List item key.
@@ -1023,6 +1038,7 @@ inline void addListItem(ToolDoc & doc, CharString const & key, CharString const 
 ..cat:Miscalleneous
 ..summary:Print @Class.ToolDoc@ object in a given format.
 ..signature:print(doc, format)
+..class:Class.ToolDoc
 ..param.stream:List item key.
 ...type:nolink:$std::ostream$
 ..param.doc:Tool documentation object to print.
@@ -1047,6 +1063,7 @@ inline void print(std::ostream & stream, ToolDoc const & doc, CharString const &
 ..cat:Miscalleneous
 ..summary:Clear entries from @Class.ToolDoc@ object.
 ..signature:clearEntries(doc)
+..class:Class.ToolDoc
 ..param.doc:Tool documentation object to clear.
 ...type:Class.ToolDoc
 ..returns:$void$
