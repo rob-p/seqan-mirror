@@ -7,6 +7,7 @@ import sys
 
 import core
 import html
+import html2
 
 
 HEADER = """
@@ -32,13 +33,14 @@ class DDDocRunner(object):
       doc_dirs    List of strings.  Names of directories with dddoc files.
     """
     
-    def __init__(self, index_only=False, doc_dirs=[], out_dir='html', demos_dir='.', cache_only=False):
+    def __init__(self, index_only=False, doc_dirs=[], out_dir='html', demos_dir='.', cache_only=False, generator='html'):
         """Initialize, arguments correspond to attributes."""
         self.index_only = index_only
         self.doc_dirs = doc_dirs
         self.out_dir = out_dir
         self.demos_dir = demos_dir
         self.cache_only = cache_only
+        self.generator = generator
 
     def run(self, base_paths):
         """Run dddoc on the modules below the given path.
@@ -70,8 +72,12 @@ class DDDocRunner(object):
 
         # Actually build the HTML files.
         print 'Creating HTML Documentation...'
-        tpl_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tpl'))
-        res = html.createDocs(app.error_logger, app.dddoc_tree, tpl_path, self.out_dir)
+        if self.generator == 'html2':
+            tpl_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tpl2'))
+            res = html2.createDocs(app.error_logger, app.dddoc_tree, tpl_path, self.out_dir)
+        else:
+            tpl_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tpl'))
+            res = html.createDocs(app.error_logger, app.dddoc_tree, tpl_path, self.out_dir)
 
         # Done, print end message.
         print 'Documentation created/updated.'
@@ -90,6 +96,9 @@ def main(argv):
                       default=[],
                       help=('Read .dddoc files from this directory.  '
                             'Can be given multiple times.'))
+    parser.add_option('-g', '--generator', dest='generator', default='html',
+                      type='choice', choices=['html', 'html2'],
+                      help='Generator to use. One of "html" and "html2".  Default: "html".')
     parser.add_option('-o', '--out-dir', dest='out_dir', default='html',
                       help='Name of output dirctory.  Default: "html".')
     parser.add_option('-e', '--demos-dir', dest='demos_dir',
@@ -111,7 +120,8 @@ def main(argv):
     app = DDDocRunner(index_only=False, doc_dirs=options.doc_dirs,
                       out_dir=options.out_dir,
                       demos_dir=options.demos_dir,
-                      cache_only=options.cache_only)
+                      cache_only=options.cache_only,
+                      generator=options.generator)
     res = app.run(args)
 
     elapsed = datetime.datetime.now() - start_time
